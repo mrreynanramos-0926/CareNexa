@@ -1,0 +1,951 @@
+[
+  {
+    "name": "Facial",
+    "type": "service",
+    "price": "210.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "DEEP CLEANING",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Relaxing Facial",
+    "type": "service",
+    "price": "649.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Facial Scrub",
+    "type": "service",
+    "price": "100.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Gold Mask",
+    "type": "service",
+    "price": "200.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Charcoal Mask",
+    "type": "service",
+    "price": "200.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Skin Peel",
+    "type": "service",
+    "price": "100.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Poreminimizer",
+    "type": "service",
+    "price": "100.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Steam",
+    "type": "service",
+    "price": "100.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Deep Moisture",
+    "type": "service",
+    "price": "150.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Whitening Facial",
+    "type": "service",
+    "price": "799.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Whitening Facial -Charge",
+    "type": "service",
+    "price": "300.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Anti-Aging Facial",
+    "type": "service",
+    "price": "799.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Anti-Aging Facial - Charge",
+    "type": "service",
+    "price": "300.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Charcoal Facial",
+    "type": "service",
+    "price": "599.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Charcoal Facial Check up",
+    "type": "service",
+    "price": "250.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diamond Peel",
+    "type": "service",
+    "price": "950.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diamond Peel with Face Scrub",
+    "type": "service",
+    "price": "1050.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diamond Peel with Face & Neck Scrub",
+    "type": "service",
+    "price": "1150.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diamond Peel with PDT",
+    "type": "service",
+    "price": "1250.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diamond Peel (Package)",
+    "type": "service",
+    "price": "5700.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Under Arm Diamond Peel",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Under Arm Diamond Peel (Package)",
+    "type": "service",
+    "price": "2994.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Underarm Facial",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Warts Removal",
+    "type": "service",
+    "price": "20.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "MILLIA REMOVAL",
+    "type": "service",
+    "price": "20.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Photodynamic Facial 2lights",
+    "type": "service",
+    "price": "899.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Photodynamic Facial 1light",
+    "type": "service",
+    "price": "650.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Photodynamic Facial CHARGE",
+    "type": "service",
+    "price": "350.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "FOOTSPA",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 0,
+    "commissionFlat": "100.00",
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "FOOTSPA WITH PARAFFIN",
+    "type": "service",
+    "price": "699.00",
+    "commissionPercent": 0,
+    "commissionFlat": "120.00",
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Foot Paraffin",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Foot Paraffin Add's ON",
+    "type": "service",
+    "price": "200.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Foot Scrub",
+    "type": "service",
+    "price": "400.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Leg Whitening (Half)",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Leg Whitening (Whole)",
+    "type": "service",
+    "price": "999.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Leg wax (half) women",
+    "type": "service",
+    "price": "350.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Leg wax (half) Men",
+    "type": "service",
+    "price": "400.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Leg Wax (Whole) Women",
+    "type": "service",
+    "price": "700.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Leg Wax (Whole) Men",
+    "type": "service",
+    "price": "800.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Leg Whitening Add on",
+    "type": "service",
+    "price": "200.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Hand Scrub",
+    "type": "service",
+    "price": "400.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Hand Paraffin",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Armcial",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "ARM WHITENING ADD ON",
+    "type": "service",
+    "price": "200.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Arm Whitening",
+    "type": "service",
+    "price": "499.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Arm Wax (Half) women",
+    "type": "service",
+    "price": "350.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Arm Wax (Half) Men",
+    "type": "service",
+    "price": "400.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Arm Wax (Whole) women",
+    "type": "service",
+    "price": "700.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Arm Wax (Whole) Men",
+    "type": "service",
+    "price": "800.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Backcial",
+    "type": "service",
+    "price": "800.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Back Scrub",
+    "type": "service",
+    "price": "250.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Back Diamond Peel",
+    "type": "service",
+    "price": "1300.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Chestial",
+    "type": "service",
+    "price": "350.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Chestial w/ Scrub",
+    "type": "service",
+    "price": "550.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Armpit wax",
+    "type": "service",
+    "price": "300.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Hydra Facial",
+    "type": "service",
+    "price": "1200.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Hydra Facial w/PDT",
+    "type": "service",
+    "price": "1500.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Hydra Facial (Pacakge)",
+    "type": "service",
+    "price": "7200.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Underarm",
+    "type": "service",
+    "price": "800.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Underarm(package)",
+    "type": "service",
+    "price": "4800.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Legs",
+    "type": "service",
+    "price": "2000.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Legs(package)",
+    "type": "service",
+    "price": "12000.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Arms",
+    "type": "service",
+    "price": "1500.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Arms(package)",
+    "type": "service",
+    "price": "9000.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Beards",
+    "type": "service",
+    "price": "500.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Diode Laser Beards(package)",
+    "type": "service",
+    "price": "3000.00",
+    "commissionPercent": 10,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Carbon Laser",
+    "type": "service",
+    "price": "1500.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Carbon Laser (Package)",
+    "type": "service",
+    "price": "9000.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "UnderArm Carbon Laser",
+    "type": "service",
+    "price": "800.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "UnderArm Carbon Laser (Package)",
+    "type": "service",
+    "price": "4800.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Pico Laser",
+    "type": "service",
+    "price": "2000.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Pico Laser (Package)",
+    "type": "service",
+    "price": "12000.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Underarm Pico Laser",
+    "type": "service",
+    "price": "1000.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Underarm Pico Laser (Package)",
+    "type": "service",
+    "price": "6000.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Butt Laser",
+    "type": "service",
+    "price": "1500.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Butt Laser (package)",
+    "type": "service",
+    "price": "9000.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Sunblock",
+    "type": "service",
+    "price": "20.00",
+    "commissionPercent": 0,
+    "commissionFlat": "10.00",
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Lifting Mask",
+    "type": "service",
+    "price": "100.00",
+    "commissionPercent": 0,
+    "commissionFlat": "10.00",
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "Whitening Mask",
+    "type": "service",
+    "price": "100.00",
+    "commissionPercent": 0,
+    "commissionFlat": "10.00",
+    "description": "October 2026 list price. Gift-certificate cash is half. Gift-certificate card is 55% of the list price."
+  },
+  {
+    "name": "pimple soap",
+    "type": "product",
+    "price": "204.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "156.60"
+  },
+  {
+    "name": "pimple preventive soap",
+    "type": "product",
+    "price": "204.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "156.60"
+  },
+  {
+    "name": "glycolic soap GS",
+    "type": "product",
+    "price": "197.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "150.30"
+  },
+  {
+    "name": "hypo soap",
+    "type": "product",
+    "price": "197.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "150.30"
+  },
+  {
+    "name": "collagen soap BS",
+    "type": "product",
+    "price": "197.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "150.30"
+  },
+  {
+    "name": "whitening soap",
+    "type": "product",
+    "price": "195.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "162.00"
+  },
+  {
+    "name": "Moisturising Soap",
+    "type": "product",
+    "price": "215.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "171.00"
+  },
+  {
+    "name": "teatree soap rg 56.9",
+    "type": "product",
+    "price": "164.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "129.60"
+  },
+  {
+    "name": "clarifying (big) CL(B)",
+    "type": "product",
+    "price": "272.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "226.80"
+  },
+  {
+    "name": "pimple preventive (big)",
+    "type": "product",
+    "price": "419.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "359.10"
+  },
+  {
+    "name": "pimple solution P-SOL(B)",
+    "type": "product",
+    "price": "370.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "315.00"
+  },
+  {
+    "name": "Skin Clear Toner",
+    "type": "product",
+    "price": "345.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "292.50"
+  },
+  {
+    "name": "power lift toner",
+    "type": "product",
+    "price": "352.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "298.80"
+  },
+  {
+    "name": "milk toner MT",
+    "type": "product",
+    "price": "288.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "241.20"
+  },
+  {
+    "name": "MILK ESSENSE",
+    "type": "product",
+    "price": "350.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "297.00"
+  },
+  {
+    "name": "rejuvenating (big)",
+    "type": "product",
+    "price": "312.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "262.80"
+  },
+  {
+    "name": "natural peel # 10",
+    "type": "product",
+    "price": "234.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "192.60"
+  },
+  {
+    "name": "natural peel #12",
+    "type": "product",
+    "price": "244.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "201.60"
+  },
+  {
+    "name": "natural peel #14 (big)",
+    "type": "product",
+    "price": "277.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "231.30"
+  },
+  {
+    "name": "natural peel #34",
+    "type": "product",
+    "price": "299.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "214.20"
+  },
+  {
+    "name": "acne gel ACG",
+    "type": "product",
+    "price": "295.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "251.10"
+  },
+  {
+    "name": "Skinl renewal gel",
+    "type": "product",
+    "price": "348.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "252.00"
+  },
+  {
+    "name": "whitening skin recovery night",
+    "type": "product",
+    "price": "445.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "295.20"
+  },
+  {
+    "name": "antibiotic cream ANTI 12g",
+    "type": "product",
+    "price": "225.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "382.50"
+  },
+  {
+    "name": "TRETINION CREAM",
+    "type": "product",
+    "price": "499.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "449.10"
+  },
+  {
+    "name": "PIMPLE CREAM",
+    "type": "product",
+    "price": "377.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "184.50"
+  },
+  {
+    "name": "Hydro",
+    "type": "product",
+    "price": "320.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "321.30"
+  },
+  {
+    "name": "age defying cream ADC -rg 162.4",
+    "type": "product",
+    "price": "375.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "252.00"
+  },
+  {
+    "name": "moisturizing cream MOIST CREAM",
+    "type": "product",
+    "price": "203.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "319.50"
+  },
+  {
+    "name": "Skin renewal cream",
+    "type": "product",
+    "price": "343.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "164.70"
+  },
+  {
+    "name": "whitening cream H & T",
+    "type": "product",
+    "price": "490.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "290.70"
+  },
+  {
+    "name": "SKIN CLEAR CREAM",
+    "type": "product",
+    "price": "348.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "252.00"
+  },
+  {
+    "name": "whitening skin protective day cream",
+    "type": "product",
+    "price": "445.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "248.40"
+  },
+  {
+    "name": "sunblock gel",
+    "type": "product",
+    "price": "344.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "295.20"
+  },
+  {
+    "name": "sunblock spf 45",
+    "type": "product",
+    "price": "382.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "382.50"
+  },
+  {
+    "name": "sunblock spray",
+    "type": "product",
+    "price": "478.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "291.60"
+  },
+  {
+    "name": "age defying serum ADS",
+    "type": "product",
+    "price": "445.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "260.10"
+  },
+  {
+    "name": "vitamin c & e",
+    "type": "product",
+    "price": "315.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "325.80"
+  },
+  {
+    "name": "whitening serum",
+    "type": "product",
+    "price": "445.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "412.20"
+  },
+  {
+    "name": "lifting mask",
+    "type": "product",
+    "price": "420.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "382.50"
+  },
+  {
+    "name": "whitening mask",
+    "type": "product",
+    "price": "420.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "265.50"
+  },
+  {
+    "name": "bleaching lotion",
+    "type": "product",
+    "price": "441.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "382.50"
+  },
+  {
+    "name": "bleaching lotion RA & SB",
+    "type": "product",
+    "price": "381.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "360.00"
+  },
+  {
+    "name": "Moisturizing Body Lotion",
+    "type": "product",
+    "price": "546.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "360.00"
+  },
+  {
+    "name": "Le Blanche",
+    "type": "product",
+    "price": "1385.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "378.90"
+  },
+  {
+    "name": "bleaching lotion RA & SB (2)",
+    "type": "product",
+    "price": "361.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "324.90"
+  },
+  {
+    "name": "Moisturizing Body Lotion (2)",
+    "type": "product",
+    "price": "516.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "464.40"
+  },
+  {
+    "name": "Le Blanche (2)",
+    "type": "product",
+    "price": "1365.00",
+    "commissionPercent": 15,
+    "description": "October 2026 list price. Cash uses the sheet cash price. Card is 95% of the list price.",
+    "cashPrice": "1228.50"
+  }
+]

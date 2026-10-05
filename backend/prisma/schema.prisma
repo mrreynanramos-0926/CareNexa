@@ -1,0 +1,448 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Role {
+  id          String @id @default(cuid())
+  name        String @unique
+  description String
+  users       User[]
+
+  @@map("roles")
+}
+
+model User {
+  id                 String   @id @default(cuid())
+  name               String
+  email              String   @unique
+  passwordHash       String   @map("password_hash")
+  roleId             String   @map("role_id")
+  role               Role     @relation(fields: [roleId], references: [id])
+  status             String   @default("active")
+  mustChangePassword Boolean  @default(false) @map("must_change_password")
+  createdAt          DateTime @default(now()) @map("created_at")
+  updatedAt          DateTime @updatedAt @map("updated_at")
+
+  activities Activity[]
+  campaigns  MarketingCampaign[]
+  movements  InventoryMovement[]
+  auditLogs  AuditLog[]
+  settings   SystemSetting[]
+  voidedOrders Order[] @relation("VoidedBy")
+  createdOrders Order[] @relation("OrderCreatedBy")
+  recordedPayments OrderPayment[] @relation("PaymentCreatedBy")
+
+  @@map("users")
+}
+
+model Customer {
+  id            String    @id @default(cuid())
+  firstName     String    @map("first_name")
+  lastName      String    @map("last_name")
+  email         String?   @unique
+  phone         String?   @unique
+  birthday      DateTime?
+  address       String?
+  customerType  String    @default("individual") @map("customer_type")
+  status        String    @default("active")
+  externalPosId String?   @unique @map("external_pos_id")
+  smsConsent    Boolean   @default(false) @map("sms_consent")
+  emailConsent  Boolean   @default(false) @map("email_consent")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  memberships CustomerSegmentMembership[]
+  value       CustomerLifetimeValue?
+  orders      Order[]
+  activities  Activity[]
+  messages    MarketingMessage[]
+
+  @@index([lastName, firstName])
+  @@index([status])
+  @@map("customers")
+}
+
+model CustomerSegment {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String
+  criteria    Json
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  memberships CustomerSegmentMembership[]
+  campaigns   MarketingCampaign[]
+
+  @@map("customer_segments")
+}
+
+model CustomerSegmentMembership {
+  id         String   @id @default(cuid())
+  customerId String   @map("customer_id")
+  segmentId  String   @map("segment_id")
+  assignedAt DateTime @default(now()) @map("assigned_at")
+
+  customer Customer        @relation(fields: [customerId], references: [id])
+  segment  CustomerSegment @relation(fields: [segmentId], references: [id])
+
+  @@unique([customerId, segmentId])
+  @@index([segmentId])
+  @@map("customer_segment_memberships")
+}
+
+model ProductService {
+  id               String   @id @default(cuid())
+  name             String
+  type             String
+  description      String?
+  priceCentavos      Int      @map("price_centavos")
+  cashPriceCentavos  Int?     @map("cash_price_centavos")
+  commissionPercent     Int  @default(0) @map("commission_percent")
+  commissionFlatCentavos Int? @map("commission_flat_centavos")
+  tracksInventory    Boolean  @default(false) @map("tracks_inventory")
+  status           String   @default("active")
+  externalPosId    String?  @unique @map("external_pos_id")
+  createdAt        DateTime @default(now()) @map("created_at")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+
+  inventory  Inventory?
+  movements  InventoryMovement[]
+  alerts     InventoryAlert[]
+  orderItems OrderItem[]
+
+  @@map("products_services")
+}
+
+model Inventory {
+  id               String    @id @default(cuid())
+  productId        String    @unique @map("product_id")
+  currentStock     Int       @map("current_stock")
+  reorderLevel     Int       @map("reorder_level")
+  reorderQuantity  Int       @map("reorder_quantity")
+  unitCostCentavos Int       @map("unit_cost_centavos")
+  lastRestockDate  DateTime? @map("last_restock_date")
+  status           String
+
+  product ProductService @relation(fields: [productId], references: [id])
+
+  @@map("inventory")
+}
+
+model InventoryMovement {
+  id            String   @id @default(cuid())
+  productId     String   @map("product_id")
+  quantityDelta Int      @map("quantity_delta")
+  reason        String
+  referenceType String?  @map("reference_type")
+  referenceId   String?  @map("reference_id")
+  note          String?
+  createdById   String?  @map("created_by")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  product   ProductService @relation(fields: [productId], references: [id])
+  createdBy User?          @relation(fields: [createdById], references: [id])
+
+  @@index([productId])
+  @@map("inventory_movements")
+}
+
+model InventoryAlert {
+  id         String    @id @default(cuid())
+  productId  String    @map("product_id")
+  alertType  String    @map("alert_type")
+  message    String
+  severity   String
+  status     String
+  createdAt  DateTime  @default(now()) @map("created_at")
+  resolvedAt DateTime? @map("resolved_at")
+
+  product ProductService @relation(fields: [productId], references: [id])
+
+  @@index([productId, alertType, status])
+  @@map("inventory_alerts")
+}
+
+model Order {
+  id                String    @id @default(cuid())
+  customerId        String    @map("customer_id")
+  totalCentavos     Int       @map("total_centavos")
+  discountCentavos  Int       @default(0) @map("discount_centavos")
+  ppeCentavos       Int       @default(0) @map("ppe_centavos")
+  gcCentavos        Int       @default(0) @map("gc_centavos")
+  tipCentavos       Int       @default(0) @map("tip_centavos")
+  paymentsJson      String?   @map("payments_json")
+  paymentStatus     String    @default("PENDING") @map("payment_status")
+  orderDate         DateTime  @map("order_date")
+  status            String
+  source            String
+  externalPosId     String?   @unique @map("external_pos_id")
+  voidReason        String?   @map("void_reason")
+  voidedById        String?   @map("voided_by")
+  createdById       String?   @map("created_by")
+  createdAt         DateTime  @default(now()) @map("created_at")
+  updatedAt         DateTime  @updatedAt @map("updated_at")
+
+  customer Customer      @relation(fields: [customerId], references: [id])
+  voidedBy User?         @relation("VoidedBy", fields: [voidedById], references: [id])
+  createdBy User?        @relation("OrderCreatedBy", fields: [createdById], references: [id])
+  items    OrderItem[]
+  orderPayments OrderPayment[]
+  anomalies AnomalyAlert[]
+
+  @@index([customerId, orderDate])
+  @@index([orderDate, status])
+  @@map("orders")
+}
+
+model OrderItem {
+  id                 String @id @default(cuid())
+  orderId            String @map("order_id")
+  productId          String @map("product_id")
+  quantity           Int
+  priceRate          String @default("regular") @map("price_rate")
+  unitPriceCentavos  Int    @map("unit_price_centavos")
+  subtotalCentavos   Int    @map("subtotal_centavos")
+  dermtechId         String? @map("dermtech_id")
+
+  order    Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product  ProductService @relation(fields: [productId], references: [id])
+  dermtech Dermtech?      @relation(fields: [dermtechId], references: [id])
+
+  @@index([orderId])
+  @@index([productId])
+  @@index([dermtechId])
+  @@map("order_items")
+}
+
+model Dermtech {
+  id           String   @id @default(cuid())
+  name         String   @unique
+  phone        String   @default("")
+  notes        String   @default("")
+  isWalkIn     Boolean  @default(false) @map("is_walk_in")
+  status       String   @default("active")
+  displayOrder Int      @default(0) @map("display_order")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  items OrderItem[]
+
+  @@index([status, displayOrder])
+  @@map("dermtechs")
+}
+
+model PaymentMethod {
+  id                String   @id @default(cuid())
+  name              String
+  category          String
+  provider          String
+  code              String   @unique
+  description       String   @default("")
+  isActive          Boolean  @default(true) @map("is_active")
+  displayOrder      Int      @default(0) @map("display_order")
+  allowsChange      Boolean  @default(false) @map("allows_change")
+  requiresReference Boolean  @default(false) @map("requires_reference")
+  qrConfig          String?  @map("qr_config")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  payments OrderPayment[]
+
+  @@index([category, displayOrder])
+  @@map("payment_methods")
+}
+
+model OrderPayment {
+  id                 String   @id @default(cuid())
+  orderId            String   @map("order_id")
+  paymentMethodId    String   @map("payment_method_id")
+  amountCentavos     Int      @map("amount_centavos")
+  referenceNumber    String   @default("") @map("reference_number")
+  authorizationCode  String   @default("") @map("authorization_code")
+  cardLastFour       String   @default("") @map("card_last_four")
+  notes              String   @default("")
+  paymentStatus      String   @default("PAID") @map("payment_status")
+  paidAt             DateTime @default(now()) @map("paid_at")
+  createdById        String?  @map("created_by")
+  createdAt          DateTime @default(now()) @map("created_at")
+  updatedAt          DateTime @updatedAt @map("updated_at")
+
+  order     Order         @relation(fields: [orderId], references: [id])
+  method    PaymentMethod @relation(fields: [paymentMethodId], references: [id])
+  createdBy User?         @relation("PaymentCreatedBy", fields: [createdById], references: [id])
+
+  @@index([orderId])
+  @@index([paymentMethodId])
+  @@map("order_payments")
+}
+
+model Activity {
+  id           String   @id @default(cuid())
+  customerId   String   @map("customer_id")
+  userId       String   @map("user_id")
+  type         String
+  notes        String
+  activityDate DateTime @map("activity_date")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  customer Customer @relation(fields: [customerId], references: [id])
+  user     User     @relation(fields: [userId], references: [id])
+
+  @@index([customerId, activityDate])
+  @@map("activities")
+}
+
+model MarketingCampaign {
+  id              String   @id @default(cuid())
+  name            String
+  type            String
+  channel         String
+  targetSegmentId String   @map("target_segment_id")
+  message         String
+  startDate       DateTime @map("start_date")
+  endDate         DateTime @map("end_date")
+  status          String
+  createdById     String   @map("created_by")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  segment   CustomerSegment    @relation(fields: [targetSegmentId], references: [id])
+  createdBy User               @relation(fields: [createdById], references: [id])
+  messages  MarketingMessage[]
+
+  @@map("marketing_campaigns")
+}
+
+model TriggerRule {
+  id              String   @id @default(cuid())
+  name            String
+  eventType       String   @map("event_type")
+  conditionValue  Json     @map("condition_value")
+  action          String
+  messageTemplate String   @map("message_template")
+  channel         String
+  isActive        Boolean  @default(true) @map("is_active")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  messages MarketingMessage[]
+
+  @@map("trigger_rules")
+}
+
+model MarketingMessage {
+  id            String    @id @default(cuid())
+  customerId    String    @map("customer_id")
+  campaignId    String?   @map("campaign_id")
+  triggerRuleId String?   @map("trigger_rule_id")
+  channel       String
+  message       String
+  status        String
+  dedupeKey     String    @unique @map("dedupe_key")
+  sentAt        DateTime? @map("sent_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+
+  customer    Customer           @relation(fields: [customerId], references: [id])
+  campaign    MarketingCampaign? @relation(fields: [campaignId], references: [id])
+  triggerRule TriggerRule?       @relation(fields: [triggerRuleId], references: [id])
+
+  @@index([campaignId, status])
+  @@map("marketing_messages")
+}
+
+model CustomerLifetimeValue {
+  id                         String    @id @default(cuid())
+  customerId                 String    @unique @map("customer_id")
+  totalSpentCentavos         Int       @map("total_spent_centavos")
+  visitCount                 Int       @map("visit_count")
+  averageTransactionCentavos Int       @map("average_transaction_centavos")
+  lastVisitDate              DateTime? @map("last_visit_date")
+  calculatedAt               DateTime  @map("calculated_at")
+
+  customer Customer @relation(fields: [customerId], references: [id])
+
+  @@map("customer_lifetime_value")
+}
+
+model AnomalyAlert {
+  id            String   @id @default(cuid())
+  transactionId String   @map("transaction_id")
+  anomalyType   String   @map("anomaly_type")
+  description   String
+  severity      String
+  status        String
+  dedupeKey     String?  @unique @map("dedupe_key")
+  reviewNotes   String?  @map("review_notes")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  transaction Order @relation(fields: [transactionId], references: [id])
+
+  @@index([status, createdAt])
+  @@map("anomaly_alerts")
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?  @map("user_id")
+  action    String
+  entity    String
+  entityId  String   @map("entity_id")
+  oldValue  Json?    @map("old_value")
+  newValue  Json?    @map("new_value")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@index([createdAt])
+  @@index([entity, entityId])
+  @@map("audit_logs")
+}
+
+model BusinessProfile {
+  id            String   @id @default("default")
+  legalName     String   @map("legal_name")
+  tradeName     String   @map("trade_name")
+  businessType  String   @default("Sole proprietorship") @map("business_type")
+  tin           String   @default("")
+  addressLine1  String   @default("") @map("address_line1")
+  barangay      String   @default("")
+  city          String   @default("")
+  province      String   @default("")
+  postalCode    String   @default("") @map("postal_code")
+  country       String   @default("Philippines")
+  phone         String   @default("")
+  email         String   @default("")
+  website       String   @default("")
+  hours         String   @default("")
+  receiptFooter String   @default("") @map("receipt_footer")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@map("business_profile")
+}
+
+model RoleModuleAccess {
+  id     String @id @default(cuid())
+  role   String
+  module String
+  access String
+
+  @@unique([role, module])
+  @@map("role_module_access")
+}
+
+model SystemSetting {
+  key         String   @id
+  value       Json
+  updatedById String?  @map("updated_by")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  updatedBy User? @relation(fields: [updatedById], references: [id])
+
+  @@map("system_settings")
+}
