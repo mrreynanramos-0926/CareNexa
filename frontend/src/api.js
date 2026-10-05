@@ -1,6 +1,9 @@
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+
 export async function api(path, { method = 'GET', body } = {}) {
   const token = sessionStorage.getItem('token')
-  const response = await fetch(path, {
+  const url = path.startsWith('http') ? path : `${API_URL}${path}`
+  const response = await fetch(url, {
     method,
     headers: {
       ...(body ? { 'Content-Type': 'application/json' } : {}),
@@ -21,18 +24,19 @@ export async function api(path, { method = 'GET', body } = {}) {
 
 export async function downloadCsv(path, filename) {
   const token = sessionStorage.getItem('token')
-  const response = await fetch(path, { headers: { Authorization: `Bearer ${token}` } })
+  const url = path.startsWith('http') ? path : `${API_URL}${path}`
+  const response = await fetch(url, { headers: { Authorization: `Bearer ${token}` } })
   if (!response.ok) {
     const payload = await response.json().catch(() => null)
     throw new Error(payload?.error?.message || 'Export failed.')
   }
   const blob = await response.blob()
-  const url = URL.createObjectURL(blob)
+  const url_obj = URL.createObjectURL(blob)
   const link = document.createElement('a')
-  link.href = url
+  link.href = url_obj
   link.download = filename
   link.click()
-  URL.revokeObjectURL(url)
+  URL.revokeObjectURL(url_obj)
 }
 
 export function roleLabel(name) {
@@ -55,3 +59,4 @@ export function when(value) {
     minute: '2-digit',
   }).format(new Date(value))
 }
+
